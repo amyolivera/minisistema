@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Cursos</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Cadastro de Cursos</h1>
+    <nav>
+      <a href="home.html">Voltar</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Cadastrar Novo Curso</h2>
+    <form id="formCadastroCurso">
+      <label for="nomeCurso">Curso</label>
+      <input type="text" id="nomeCurso" placeholder="Nome do Curso" required>
+
+      <label for="descricaoCurso">Descrição do Curso</label>
+      <textarea id="descricaoCurso" name="descricaoCurso" placeholder="Descreva o Curso" rows="3" required></textarea>
+
+      <label for="anoInicio">Ano de Início</label>
+      <input type="number" id="anoInicio" name="anoInicio" placeholder="Ano de início" min="2024" required>
+
+      <button type="submit" class="btn">Cadastrar Curso</button>
+    </form>
+
+    <section class="tabela-container">
+      <h2>Cursos Cadastrados</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Curso</th>
+            <th>Descrição</th>
+            <th>Ano de Início</th>
+          </tr>
+        </thead>
+        <tbody id="tabelaCurso"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="../js/storage.js"></script>
+  <script src="../js/cadastrocurso.js"></script>
+</body>
+</html>

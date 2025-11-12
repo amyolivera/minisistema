@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Turmas</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Cadastro de Turmas</h1>
+    <nav>
+      <a href="home.html">Voltar</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Cadastrar Nova Turma</h2>
+
+    <form id="formCadastroTurma">
+      <label for="nomeTurma">Nome da Turma:</label>
+      <input type="text" id="nomeTurma" placeholder="Ex: Turma A" required>
+
+      <label for="anoInicioTurma">Ano de Início:</label>
+      <input type="number" id="anoInicioTurma" placeholder="2025" min="2024" required>
+
+      <label for="anoFinalTurma">Ano de Finalização:</label>
+      <input type="number" id="anoFinalTurma" placeholder="2026" min="2025" required>
+
+      <label for="cursoTurma">Curso:</label>
+      <select id="cursoTurma" required>
+        <option value="">Selecione o curso</option>
+      </select>
+
+      <button type="submit" class="btn">Cadastrar Turma</button>
+    </form>
+
+    <section class="tabela-container">
+      <h2>Turmas Cadastradas</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Nome da Turma</th>
+            <th>Ano de Início</th>
+            <th>Ano de Finalização</th>
+            <th>Curso</th>
+          </tr>
+        </thead>
+        <tbody id="tabelaTurmas"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="../js/storage.js"></script>
+  <script src="../js/cadastroTurma.js"></script>
+</body>
+</html>

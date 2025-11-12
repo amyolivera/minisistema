@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do Administrador</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Bem-vindo, Administrador!</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="gerenciaraluno.html">Cadastrar Aluno</a>
+      <a href="cadastrocurso.html">Cadastrar Curso</a>
+      <a href="cadastroTurma.html">Cadastrar Turma</a>
+      <a href="../index.html">Sair</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="secao-alunos">
+      <h2>Lista de Alunos Cadastrados</h2>
+
+      <label for="filtroCurso">Filtrar por Curso:</label>
+      <select id="filtroCurso">
+        <option value="">Todos</option>
+      </select>
+
+      <div class="table-wrapper">
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Idade</th>
+              <th>Matrícula</th>
+              <th>Curso</th>
+              <th>Turma</th>
+              <th>Editar Média</th>
+              <th>Remover</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaDados"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="secao-cursos" style="margin-top: 40px;">
+      <h2>Lista de Cursos Cadastrados</h2>
+      <div class="table-wrapper">
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Curso</th>
+              <th>Descrição</th>
+              <th>Ano de Início</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaCursos"></tbody>
+        </table>
+      </div>
+    </section>
+
+
+    <section class="secao-turmas" style="margin-top: 40px;">
+      <h2>Lista de Turmas Cadastradas</h2>
+      <div class="table-wrapper">
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Turma</th>
+              <th>Curso</th>
+              <th>Ano de Início</th>
+              <th>Ano de Finalização</th>
+              <th>Quantidade de Alunos</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaTurmas"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/storage.js"></script>
+  <script src="../js/home.js"></script>
+</body>
+</html>
