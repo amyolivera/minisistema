@@ -233,3 +233,63 @@ tr:nth-child(even) {
     padding: 8px;
   }
 }
+
+/* --- MENU DESKTOP --- */
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.menu-btn {
+  display: none; /* escondido no desktop */
+}
+
+/* LISTA */
+.menu-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+/* --- MENU MOBILE --- */
+@media (max-width: 700px) {
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .menu-btn {
+    display: block;
+    font-size: 1.4rem;
+    background: #ffffff33;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* Esconde o menu até clicar */
+  .menu-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  /* Quando clicado → aparece */
+  .menu-list.menu-open {
+    display: flex;
+  }
+
+  .menu-list li a {
+    padding: 10px 0;
+    display: block;
+  }
+}
